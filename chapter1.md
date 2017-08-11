@@ -28,5 +28,11 @@ SHUTDOWN\_MSG: Shutting down HiveMetaStore at localhost/127.0.0.1
 
 \[1\]+  Exit 1                  hive --service metastore
 
-修改conf/hive-site.xml 中的 “hive.metastore.schema.verification”  值为 false  即可解决 “Caused by: MetaException\(message:Version information not found in metastore. \)” 
+修改conf/hive-site.xml 中的 “hive.metastore.schema.verification”  值为 false  即可解决 “Caused by: MetaException\(message:Version information not found in metastore. \)”
+
+Caused by: javax.jdo.JDODataStoreException: Required table missing : "DBS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
+
+NestedThrowables:
+
+org.datanucleus.store.rdbms.exceptions.MissingTableException: Required table missing : "DBS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
 
