@@ -76,3 +76,19 @@ STARTUP\_MSG:   version = 2.3.0
 
 2017-08-11T19:56:02,336 INFO \[main\] org.apache.hadoop.hive.metastore.HiveMetaStore - TCP keepalive = true
 
+$ vi conf/hive-site.xml
+
+&lt;property&gt;
+
+  &lt;name&gt;hive.metastore.local&lt;/name&gt;
+
+  &lt;value&gt;true&lt;/value&gt;
+
+&lt;/property&gt;
+
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine \(i.e. spark, tez\) or using Hive 1.X releases.
+
+hive&gt; show tables;
+
+FAILED: SemanticException org.apache.hadoop.hive.ql.metadata.HiveException: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+
