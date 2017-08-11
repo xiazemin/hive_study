@@ -46,13 +46,49 @@ $ vi hive-site.xml
 
 &lt;property&gt;
 
-   &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
+&lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
 
-   &lt;value&gt;jdbc:derby://localhost:1527/metastore\_db;create=true &lt;/value&gt;
+&lt;value&gt;jdbc:derby://localhost:1527/metastore\_db;create=true &lt;/value&gt;
 
-   &lt;description&gt;JDBC connect string for a JDBC metastore &lt;/description&gt;
+&lt;description&gt;JDBC connect string for a JDBC metastore &lt;/description&gt;
 
 &lt;/property&gt;
 
+创建一个文件名为 jpox.properties 并添加以下行：
 
+
+
+javax.jdo.PersistenceManagerFactoryClass =
+
+
+
+org.jpox.PersistenceManagerFactoryImpl
+
+org.jpox.autoCreateSchema = false
+
+org.jpox.validateTables = false
+
+org.jpox.validateColumns = false
+
+org.jpox.validateConstraints = false
+
+org.jpox.storeManagerType = rdbms
+
+org.jpox.autoCreateSchema = true
+
+org.jpox.autoStartMechanismMode = checked
+
+org.jpox.transactionIsolation = read\_committed
+
+javax.jdo.option.DetachAllOnCommit = true
+
+javax.jdo.option.NontransactionalRead = true
+
+javax.jdo.option.ConnectionDriverName = org.apache.derby.jdbc.ClientDriver
+
+javax.jdo.option.ConnectionURL = jdbc:derby://hadoop1:1527/metastore\_db;create = true
+
+javax.jdo.option.ConnectionUserName = APP
+
+javax.jdo.option.ConnectionPassword = mine
 
