@@ -34,3 +34,25 @@ export PATH=$PATH:$DERBY\_HOME/bin
 
 export CLASSPATH=$CLASSPATH:$DERBY\_HOME/lib/derby.jar:$DERBY\_HOME/lib/derbytools.jar
 
+$ mkdir $DERBY\_HOME/data
+
+$  cd $HIVE\_HOME/conf
+
+$  cp hive-default.xml.template hive-site.xml
+
+$ vi hive-site.xml
+
+--&gt;&lt;configuration&gt;
+
+&lt;property&gt;
+
+   &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
+
+   &lt;value&gt;jdbc:derby://localhost:1527/metastore\_db;create=true &lt;/value&gt;
+
+   &lt;description&gt;JDBC connect string for a JDBC metastore &lt;/description&gt;
+
+&lt;/property&gt;
+
+
+
