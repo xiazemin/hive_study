@@ -22,5 +22,7 @@ $ vi hive-env.sh
 
 export HADOOP\_HOME=/Users/didi/hadoop/hadoop/
 
+Hive安装成功完成。现在，需要一个外部数据库服务器配置Metastore。我们使用Apache Derby数据库。
 
+$ axel -n 60 http://archive.apache.org/dist/db/derby/db-derby-10.8.2.2/db-derby-10.8.2.2-bin.tar.gz
 
