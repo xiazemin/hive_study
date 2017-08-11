@@ -48,5 +48,25 @@ $ vi conf/hive-site.xml
 &lt;value&gt;true&lt;/value&gt;
 ```
 
+$ hive --service metastore &
+
+\[1\] 9852
+
+ 2017-08-11 19:55:50: Starting Hive Metastore Server
+
+/Users/didi/hive/hive/bin/ext/metastore.sh: line 29: export: \` -Dproc\_metastore  -Dlog4j.configurationFile=hive-log4j2.properties  -Djava.util.logging.config.file=/Users/didi/hive/hive/conf/parquet-logging.properties  ': not a valid identifier
+
+2017-08-11T19:55:54,413 INFO \[main\] org.apache.hadoop.hive.metastore.HiveMetaStore - STARTUP\_MSG:
+
+/\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+STARTUP\_MSG: Starting HiveMetaStore
+
+STARTUP\_MSG:   host = localhost/127.0.0.1
+
+STARTUP\_MSG:   args = \[\]
+
+STARTUP\_MSG:   version = 2.3.0
+
 
 
