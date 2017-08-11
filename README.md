@@ -14,3 +14,7 @@ export CLASSPATH=$CLASSPATH:/Users/didi/hadoop/hadoop/\*:.
 
 export CLASSPATH=$CLASSPATH:/Users/didi/hive/hive/lib/\*:.
 
+ $cd $HIVE\_HOME/conf
+
+
+
