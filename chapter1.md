@@ -40,11 +40,13 @@ org.datanucleus.store.rdbms.exceptions.MissingTableException: Required table mis
 
 datanucleus.autoCreateSchema is not a valid property in DataNucleus 4.0 \(see the properties doc\), as defined by the migration guide from v3.x. Using datanucleus.schema.autoCreateAll would make more sense.
 
-$ vi conf/hive-site.xml  
+$ vi conf/hive-site.xml
 
- &lt;name&gt;datanucleus.schema.autoCreateAll&lt;/name&gt;
+&lt;name&gt;datanucleus.schema.autoCreateAll&lt;/name&gt;
 
-    &lt;value&gt;true&lt;/value&gt;
+```
+&lt;value&gt;true&lt;/value&gt;
+```
 
 
 
