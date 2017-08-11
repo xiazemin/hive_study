@@ -52,7 +52,7 @@ $ hive --service metastore &
 
 \[1\] 9852
 
- 2017-08-11 19:55:50: Starting Hive Metastore Server
+2017-08-11 19:55:50: Starting Hive Metastore Server
 
 /Users/didi/hive/hive/bin/ext/metastore.sh: line 29: export: \` -Dproc\_metastore  -Dlog4j.configurationFile=hive-log4j2.properties  -Djava.util.logging.config.file=/Users/didi/hive/hive/conf/parquet-logging.properties  ': not a valid identifier
 
@@ -68,5 +68,11 @@ STARTUP\_MSG:   args = \[\]
 
 STARTUP\_MSG:   version = 2.3.0
 
+2017-08-11T19:56:02,336 INFO \[main\] org.apache.hadoop.hive.metastore.HiveMetaStore - Started the new metaserver on port \[9083\]...
 
+2017-08-11T19:56:02,336 INFO \[main\] org.apache.hadoop.hive.metastore.HiveMetaStore - Options.minWorkerThreads = 200
+
+2017-08-11T19:56:02,336 INFO \[main\] org.apache.hadoop.hive.metastore.HiveMetaStore - Options.maxWorkerThreads = 1000
+
+2017-08-11T19:56:02,336 INFO \[main\] org.apache.hadoop.hive.metastore.HiveMetaStore - TCP keepalive = true
 
