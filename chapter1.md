@@ -26,7 +26,7 @@ SHUTDOWN\_MSG: Shutting down HiveMetaStore at localhost/127.0.0.1
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
 
-
-
 \[1\]+  Exit 1                  hive --service metastore
+
+修改conf/hive-site.xml 中的 “hive.metastore.schema.verification”  值为 false  即可解决 “Caused by: MetaException\(message:Version information not found in metastore. \)” 
 
