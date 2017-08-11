@@ -56,11 +56,7 @@ $ vi hive-site.xml
 
 创建一个文件名为 jpox.properties 并添加以下行：
 
-
-
 javax.jdo.PersistenceManagerFactoryClass =
-
-
 
 org.jpox.PersistenceManagerFactoryImpl
 
@@ -91,4 +87,44 @@ javax.jdo.option.ConnectionURL = jdbc:derby://hadoop1:1527/metastore\_db;create 
 javax.jdo.option.ConnectionUserName = APP
 
 javax.jdo.option.ConnectionPassword = mine
+
+$ cd $HIVE\_HOME
+
+$ ./bin/hive
+
+Exception in thread "main" java.lang.IllegalArgumentException: java.net.URISyntaxException: Relative path in absolute URI: ${system:java.io.tmpdir%7D/$%7Bsystem:user.name%7D
+
+$mkdir /Users/didi/hive/hive/iotmp
+
+$   vi conf/hive-site.xml
+
+--&gt;&lt;configuration&gt;
+
+&lt;property&gt;
+
+&lt;name&gt;system:java.io.tmpdir&lt;/name&gt;
+
+&lt;value&gt;/Users/didi/hive/hive/iotmp/&lt;/value&gt;
+
+&lt;/property&gt;
+
+$ ./bin/hive
+
+SLF4J: Class path contains multiple SLF4J bindings.
+
+SLF4J: Found binding in \[jar:file:/Users/didi/hive/hive/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class\]
+
+SLF4J: Found binding in \[jar:file:/Users/didi/hadoop/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class\]
+
+SLF4J: See http://www.slf4j.org/codes.html\#multiple\_bindings for an explanation.
+
+SLF4J: Actual binding is of type \[org.apache.logging.slf4j.Log4jLoggerFactory\]
+
+
+
+Logging initialized using configuration in jar:file:/Users/didi/hive/hive/lib/hive-common-2.3.0.jar!/hive-log4j2.properties Async: true
+
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine \(i.e. spark, tez\) or using Hive 1.X releases.
+
+hive&gt; show tables;
 
