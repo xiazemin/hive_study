@@ -116,15 +116,15 @@ SLF4J: Found binding in \[jar:file:/Users/didi/hive/hive/lib/log4j-slf4j-impl-2.
 
 SLF4J: Found binding in \[jar:file:/Users/didi/hadoop/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class\]
 
-SLF4J: See http://www.slf4j.org/codes.html\#multiple\_bindings for an explanation.
+SLF4J: See [http://www.slf4j.org/codes.html\#multiple\_bindings](http://www.slf4j.org/codes.html#multiple_bindings) for an explanation.
 
 SLF4J: Actual binding is of type \[org.apache.logging.slf4j.Log4jLoggerFactory\]
-
-
 
 Logging initialized using configuration in jar:file:/Users/didi/hive/hive/lib/hive-common-2.3.0.jar!/hive-log4j2.properties Async: true
 
 Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine \(i.e. spark, tez\) or using Hive 1.X releases.
 
 hive&gt; show tables;
+
+FAILED: SemanticException org.apache.hadoop.hive.ql.metadata.HiveException: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
 
