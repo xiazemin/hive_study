@@ -36,3 +36,15 @@ NestedThrowables:
 
 org.datanucleus.store.rdbms.exceptions.MissingTableException: Required table missing : "DBS" in Catalog "" Schema "". DataNucleus requires this table to perform its persistence operations. Either your MetaData is incorrect, or you need to enable "datanucleus.schema.autoCreateTables"
 
+原因
+
+datanucleus.autoCreateSchema is not a valid property in DataNucleus 4.0 \(see the properties doc\), as defined by the migration guide from v3.x. Using datanucleus.schema.autoCreateAll would make more sense.
+
+$ vi conf/hive-site.xml  
+
+ &lt;name&gt;datanucleus.schema.autoCreateAll&lt;/name&gt;
+
+    &lt;value&gt;true&lt;/value&gt;
+
+
+
