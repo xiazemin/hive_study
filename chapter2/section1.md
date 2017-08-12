@@ -76,3 +76,7 @@ No rows selected \(1.776 seconds\)
 
 0: jdbc:hive2://localhost:10000/&gt;
 
+0: jdbc:hive2://localhost:10000/&gt; !quit
+
+Closing: 0: jdbc:hive2://localhost:10000/
+
