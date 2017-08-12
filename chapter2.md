@@ -30,3 +30,11 @@ $ vi ./conf/hive-site.xml
 
 $ cp hive-log4j.properties.template hive-log4j.properties
 
+$ vi hive-log4j.properties
+
+\#hive.log.dir=${java.io.tmpdir}/${user.name}
+
+hive.log.dir=/Users/didi/hive/hive/iotmp
+
+hive.log.file=hive.log
+
