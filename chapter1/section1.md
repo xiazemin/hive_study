@@ -42,5 +42,29 @@ $    ls /Users/didi/hadoop/hadoop/share/hadoop/yarn/lib/jline-0.9.94.jar
 
 解决：
 
-cp /hive/apache-hive-1.1.0-bin/lib/jline-2.12.jar /hadoop-2.5.2/share/hadoop/yarn/lib
+$ cp /Users/didi/hive/hive/lib/jline-2.12.jar /Users/didi/hadoop/hadoop/share/hadoop/yarn/lib/
+
+$ mv /Users/didi/hadoop/hadoop/share/hadoop/yarn/lib/jline-0.9.94.jar /Users/didi/hadoop/hadoop/share/hadoop/yarn/lib/jline-0.9.94.jar.bak
+
+$ ./bin/hive
+
+ls: /Users/didi/spark/spark/lib/spark-assembly-\*.jar: No such file or directory
+
+17/08/12 11:26:05 WARN conf.HiveConf: HiveConf of name hive.metastore.local does not exist
+
+
+
+Logging initialized using configuration in jar:file:/Users/didi/hive/hive/lib/hive-common-1.2.2.jar!/hive-log4j.properties
+
+hive&gt; show tables;
+
+OK
+
+Time taken: 1.128 seconds
+
+安装成功
+
+
+
+
 
