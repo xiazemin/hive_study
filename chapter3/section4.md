@@ -4,8 +4,6 @@
 
 FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. java.lang.RuntimeException: Please specify deferred rebuild using " WITH DEFERRED REBUILD ".
 
-
-
 0: jdbc:hive2://localhost:10000/&gt; CREATE INDEX inedx\_key ON TABLE userdb \( key \)  as 'org.apache.hadoop.hive.ql.index.compact.CompactIndexHandler'  WITH DEFERRED REBUILD;
 
 No rows affected \(0.136 seconds\)
@@ -29,4 +27,8 @@ No rows affected \(0.136 seconds\)
 +-----------------------+-----------------------+-----------------------+------------------------------+-----------------------+-----------------------+--+
 
 4 rows selected \(0.109 seconds\)
+
+删除索引
+
+    DROP INDEX IF EXISTS tableName\_index ON TABLE &lt;table&gt;;
 
