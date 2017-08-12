@@ -18,6 +18,12 @@ $ vi conf/hive-site.xml
 
 &lt;/property&gt;
 
+可以通过命令启动：
+
+     hive --service hiveserver2 --hiveconf hive.server2.thrift.port=11111   设置端口号，默认端口号为10000
+
+     也可以通过hiveserver2 直接启动，这时端口号为默认10000
+
 $  ./bin/hive --service hiveserver2
 
 $  ./bin/hive --service hiveserver2 --hiveconf hive.server2.thrift.port=10001
