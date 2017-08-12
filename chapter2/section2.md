@@ -30,5 +30,27 @@ httpcore-4.2.5.jar
 
 Exception in thread "main" java.sql.SQLException: Error while processing statement: FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. MetaException\(message:Got exception: org.apache.hadoop.security.AccessControlException Permission denied: user=APP, access=WRITE, inode="/user/hive/warehouse":didi:supergroup:drwxr-xr-xat org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkFsPermission\\(FSPermissionChecker.java:271\\)
 
+$ hdfs dfs -chmod 777  /user/hive/warehouse
+
+SLF4J: See http://www.slf4j.org/codes.html\#StaticLoggerBinder for further details.
+
+Create table success!
+
+Running: show tables 'userdb'
+
+userdb
+
+Running: describe userdb
+
+key	int
+
+value	string
+
+Running: select count\(1\) from userdb
+
+0
+
+
+
 
 
