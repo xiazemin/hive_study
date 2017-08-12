@@ -30,19 +30,33 @@ hive&gt;
 
 &lt;/property&gt;
 
-
-
 如果还是不行
 
 继续在hive-site.xml中，
 
 将hive.exec.local.scratchdir
 
-     ${system:java.io.tmpdir}/${ system:user.name}
+```
+ ${system:java.io.tmpdir}/${ system:user.name}
+```
 
 改成：
 
-    hive.exec.local.scratchdir
+```
+hive.exec.local.scratchdir
 
-    ${ java.io.tmpdir}/${ user.name}
+${ java.io.tmpdir}/${ user.name}
+```
+
+hive&gt; show databases;
+
+OK
+
+default
+
+userdb
+
+Time taken: 1.119 seconds, Fetched: 2 row\(s\)
+
+
 
