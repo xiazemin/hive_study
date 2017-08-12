@@ -34,6 +34,10 @@ $ vi conf/hive-site.xml
 
 $ hive --service hiveserver2
 
+ls: /Users/didi/spark/spark/lib/spark-assembly-\*.jar: No such file or directory
+
+OK
+
 $     beeline
 
 Beeline version 1.2.1.spark2 by Apache Hive
