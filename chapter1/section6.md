@@ -87,7 +87,7 @@ usage:hiveserver
 
 --minWorkerThreads &lt;arg&gt;      minimum number of worker threads,  
 
-                              default:100  
+                              default:100
 ```
 
 -p &lt;port&gt;                        Hive Server portnumber, default:10000
@@ -178,33 +178,35 @@ fs.file.impl.disable.cache – 禁用本地文件系统缓存，默认值为fals
    1\)：配置监听端口和路径
 ```
 
-  2\)：设置impersonation
+2\)：设置impersonation
 
-      这样hive server会以提交用户的身份去执行语句，如果设置为false，则会以起hive server daemon的admin user来执行语句
+```
+  这样hive server会以提交用户的身份去执行语句，如果设置为false，则会以起hive server daemon的admin user来执行语句
+```
 
 3\):hiveserver2节点配置
 
-
-
 Hiveserver2已经不再需要hive.metastore.local这个配置项了（hive.metastore.uris为空，则表示是metastore在本地，否则
-
-
 
 就是远程）远程的话直接配置hive.metastore.uris即可
 
- 启动服务：
+启动服务：
 
-       1\)：启动metastore
+```
+   1\)：启动metastore
 
-       bin/hive --service metastore &
+   bin/hive --service metastore &
 
-       默认端口为9083
+   默认端口为9083
 
-       2\)：启动hiveserver2
+   2\)：启动hiveserver2
 
-       bin/hive --service hiveserver2 &
+   bin/hive --service hiveserver2 &
 
-       3\)：测试
+   3\)：测试
 
-       Web UI：http://192.168.48.130:10002/
+   Web UI：http://192.168.48.130:10002/
+```
+
+
 
