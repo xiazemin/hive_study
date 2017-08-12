@@ -38,5 +38,11 @@ hive.log.dir=/Users/didi/hive/hive/iotmp
 
 hive.log.file=hive.log
 
-	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement\(Unknown Source\)
+```
+at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement\(Unknown Source\)
+```
+
+HiveServer2提供了一个新的命令行工具Beeline，它是基于SQLLine CLI的JDBC客户端。关于SQLLine的的知识，可以参考这个网站：http://sqlline.sourceforge.NET/\#manual
+
+Beeline工作模式有两种，即本地嵌入模式和远程模式。嵌入模式情况下，它返回一个嵌入式的Hive（类似于hive CLI）。而远程模式则是通过Thrift协议与某个单独的HiveServer2进程进行连接通信。
 
