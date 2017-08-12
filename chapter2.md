@@ -20,9 +20,13 @@ $ vi ./conf/hive-site.xml
 
 &lt;property&gt;
 
-    &lt;name&gt;hive.log4j.file&lt;/name&gt;
+```
+&lt;name&gt;hive.log4j.file&lt;/name&gt;
 
-    &lt;value&gt;/Users/didi/hive/hive/iotmp/&lt;/value&gt;
+&lt;value&gt;/Users/didi/hive/hive/iotmp/&lt;/value&gt;
+```
 
 &lt;/property&gt;
+
+$ cp hive-log4j.properties.template hive-log4j.properties
 
