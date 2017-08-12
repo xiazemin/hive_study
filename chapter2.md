@@ -38,3 +38,5 @@ hive.log.dir=/Users/didi/hive/hive/iotmp
 
 hive.log.file=hive.log
 
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement\(Unknown Source\)
+
