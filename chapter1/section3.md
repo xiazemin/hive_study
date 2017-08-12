@@ -1,2 +1,4 @@
-# section3
+# hive数据类型
+
+
 
