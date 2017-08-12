@@ -24,6 +24,16 @@ at jdbc.main\(jdbc.java:33\)
 
 在 hive 1.2.1 需要 jdbc:hive2://localhost:10000/default 而不是 jdbc:hive://localhost:10000/default
 
+log4j:WARN No appenders could be found for logger \(org.apache.hive.jdbc.Utils\).
+
+log4j:WARN Please initialize the log4j system properly.
+
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html\#noconfig for more info.
+
+Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/hadoop/conf/Configuration
+
+	at org.apache.hive.jdbc.HiveConnection.createBinaryTransport\(HiveConnection.java:469\)
+
 $ ./bin/hive --service hiveserver -p 10002
 
 ls: /Users/didi/spark/spark/lib/spark-assembly-\*.jar: No such file or directory
