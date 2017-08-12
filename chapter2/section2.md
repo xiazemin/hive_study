@@ -28,7 +28,7 @@ httpcore-4.2.5.jar
 
 不包含hadoop-common-2.2.0.jar  会报异常
 
-Exception in thread "main" java.sql.SQLException: Error while processing statement: FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. MetaException\(message:Got exception: org.apache.hadoop.security.AccessControlException Permission denied: user=APP, access=WRITE, inode="/user/hive/warehouse":didi:supergroup:drwxr-xr-x
+Exception in thread "main" java.sql.SQLException: Error while processing statement: FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. MetaException\(message:Got exception: org.apache.hadoop.security.AccessControlException Permission denied: user=APP, access=WRITE, inode="/user/hive/warehouse":didi:supergroup:drwxr-xr-xat org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkFsPermission\\(FSPermissionChecker.java:271\\)
 
-	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkFsPermission\(FSPermissionChecker.java:271\)
+
 
