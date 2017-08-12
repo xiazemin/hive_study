@@ -13,36 +13,98 @@
 
 日期
 
-DATE值在年/月/日的格式形式描述 \\{\\{YYYY-MM-DD\\}\\}.
+DATE值在年/月/日的格式形式描述 \{\{YYYY-MM-DD\}\}.
 
 小数点  
 在Hive 小数类型与Java大十进制格式相同。它是用于表示不可改变任意精度。
 
 联合类型
 
-
-
 联合是异类的数据类型的集合。可以使用联合创建的一个实例。语法和示例如下：
-
-
 
 UNIONTYPE&lt;int, double, array&lt;string&gt;, struct&lt;a:int,b:string&gt;&gt;
 
+{0:1}
 
+{1:2.0}
 
-{0:1} 
+{2:\["three","four"\]}
 
-{1:2.0} 
+{3:{"a":5,"b":"five"}}
 
-{2:\["three","four"\]} 
+{2:\["six","seven"\]}
 
-{3:{"a":5,"b":"five"}} 
+{3:{"a":8,"b":"eight"}}
 
-{2:\["six","seven"\]} 
-
-{3:{"a":8,"b":"eight"}} 
-
-{0:9} 
+{0:9}
 
 {1:10.0}
+
+文字
+
+
+
+下面是Hive中使用的文字中：
+
+
+
+浮点类型
+
+
+
+浮点类型是只不过有小数点的数字。通常，这种类型的数据组成DOUBLE数据类型。
+
+
+
+十进制类型
+
+
+
+十进制数据类型是只不过浮点值范围比DOUBLE数据类型更大。十进制类型的范围大约是 -10-308 到 10308.
+
+Null 值
+
+
+
+缺少值通过特殊值 - NULL表示。
+
+
+
+复杂类型
+
+
+
+Hive复杂数据类型如下：
+
+
+
+数组
+
+
+
+在Hive 数组与在Java中使用的方法相同。
+
+
+
+Syntax: ARRAY&lt;data\_type&gt;
+
+映射
+
+
+
+映射在Hive类似于Java的映射。
+
+
+
+Syntax: MAP&lt;primitive\_type, data\_type&gt;
+
+结构体
+
+
+
+在Hive结构体类似于使用复杂的数据。
+
+
+
+Syntax: STRUCT&lt;col\_name : data\_type \[COMMENT col\_comment\], ...&gt;
 
