@@ -14,11 +14,17 @@ Class.forName\("org.apache.hadoop.hive.jdbc.HiveDriver"\);
 
 Exception in thread "main" java.sql.SQLException: No suitable driver found for jdbc:hive://localhost:10002/default
 
-	at java.sql.DriverManager.getConnection\(DriverManager.java:689\)
+```
+at java.sql.DriverManager.getConnection\(DriverManager.java:689\)
 
-	at java.sql.DriverManager.getConnection\(DriverManager.java:247\)
+at java.sql.DriverManager.getConnection\(DriverManager.java:247\)
 
-	at jdbc.main\(jdbc.java:33\)
+at jdbc.main\(jdbc.java:33\)
+```
+
+在 hive 1.2.1 需要 jdbc:hive2://localhost:10000/default 而不是 jdbc:hive://localhost:10000/default
+
+
 
 
 
