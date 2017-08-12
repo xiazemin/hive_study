@@ -1,7 +1,5 @@
 # 操作
 
-
-
 0: jdbc:hive2://localhost:10000/&gt; insert into userdb \(key,value\) values \(1215,"world"\);
 
 INFO  : Number of reduce tasks is set to 0 since there's no reduce operator
@@ -10,7 +8,7 @@ INFO  : number of splits:1
 
 INFO  : Submitting tokens for job: job\_local303009228\_0004
 
-INFO  : The url to track the job: http://localhost:8080/
+INFO  : The url to track the job: [http://localhost:8080/](http://localhost:8080/)
 
 INFO  : Job running in-process \(local Hadoop\)
 
