@@ -20,9 +20,11 @@ $ vi conf/hive-site.xml
 
 可以通过命令启动：
 
-     hive --service hiveserver2 --hiveconf hive.server2.thrift.port=11111   设置端口号，默认端口号为10000
+```
+ hive --service hiveserver2 --hiveconf hive.server2.thrift.port=11111   设置端口号，默认端口号为10000
 
-     也可以通过hiveserver2 直接启动，这时端口号为默认10000
+ 也可以通过hiveserver2 直接启动，这时端口号为默认10000
+```
 
 $  ./bin/hive --service hiveserver2
 
@@ -35,4 +37,26 @@ $  ./bin/hive --service hiveserver2 --hiveconf hive.server2.thrift.port=10001
 17/08/12 14:40:52 INFO jdbc.HiveConnection: Transport Used for JDBC connection: null
 
 Error: Could not open client transport with JDBC Uri: jdbc:hive2://localhost:10000: java.net.ConnectException: Connection refused \(Connection refused\) \(state=08S01,code=0\)
+
+$ vi conf/hive-site.xml
+
+&lt;property&gt;  
+
+        &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;  
+
+        &lt;value&gt;root&lt;/value&gt;  
+
+        &lt;description&gt;ername to use against metastoredatabase&lt;/description&gt;  
+
+&lt;/property&gt;  
+
+&lt;property&gt;  
+
+        &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;  
+
+        &lt;value&gt;123456&lt;/value&gt;  
+
+        &lt;description&gt;password to use against metastoredatabase&lt;/description&gt;  
+
+&lt;/property&gt; 
 
