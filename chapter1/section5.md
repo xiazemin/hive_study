@@ -28,11 +28,13 @@ log4j:WARN No appenders could be found for logger \(org.apache.hive.jdbc.Utils\)
 
 log4j:WARN Please initialize the log4j system properly.
 
-log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html\#noconfig for more info.
+log4j:WARN See [http://logging.apache.org/log4j/1.2/faq.html\#noconfig](http://logging.apache.org/log4j/1.2/faq.html#noconfig) for more info.
 
 Exception in thread "main" java.lang.NoClassDefFoundError: org/apache/hadoop/conf/Configuration
 
-	at org.apache.hive.jdbc.HiveConnection.createBinaryTransport\(HiveConnection.java:469\)
+```
+at org.apache.hive.jdbc.HiveConnection.createBinaryTransport\(HiveConnection.java:469\)
+```
 
 $ ./bin/hive --service hiveserver -p 10002
 
@@ -45,4 +47,22 @@ Exception in thread "main" java.lang.ClassNotFoundException: org.apache.hadoop.h
 $ vi etc/hadoop/hadoop-env.sh
 
 export HADOOP\_CLASSPATH=$HADOOP\_CLASSPATH:/Users/didi/hive/hive/lib/hive-\*.jar
+
+$ ./bin/hive --service hiveserver2 -p 10002
+
+ls: /Users/didi/spark/spark/lib/spark-assembly-\*.jar: No such file or directory
+
+Error starting HiveServer2 with given arguments:
+
+Unrecognized option: -p
+
+$ ./bin/hive --service hiveserver2 
+
+ls: /Users/didi/spark/spark/lib/spark-assembly-\*.jar: No such file or directory
+
+17/08/12 12:34:21 WARN conf.HiveConf: HiveConf of name hive.metastore.local does not exist
+
+启动成功
+
+
 
