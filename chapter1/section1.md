@@ -34,27 +34,13 @@ java.lang.IncompatibleClassChangeError: Found class jline.Terminal, but interfac
 
 原因：
 
-
-
 hadoop目录下存在老版本jline:
-
-
 
 /hadoop-2.6.0/share/hadoop/yarn/lib：
 
-
-
--rw-r--r-- 1 root root  87325 Mar 10 18:10 jline-0.9.94.jar
-
-
+$    ls /Users/didi/hadoop/hadoop/share/hadoop/yarn/lib/jline-0.9.94.jar
 
 解决：
 
-
-
 cp /hive/apache-hive-1.1.0-bin/lib/jline-2.12.jar /hadoop-2.5.2/share/hadoop/yarn/lib
-
-
-
-
 
