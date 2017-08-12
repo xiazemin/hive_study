@@ -56,7 +56,7 @@ Error starting HiveServer2 with given arguments:
 
 Unrecognized option: -p
 
-$ ./bin/hive --service hiveserver2 
+$ ./bin/hive --service hiveserver2
 
 ls: /Users/didi/spark/spark/lib/spark-assembly-\*.jar: No such file or directory
 
@@ -64,5 +64,21 @@ ls: /Users/didi/spark/spark/lib/spark-assembly-\*.jar: No such file or directory
 
 启动成功
 
+解决方法：
 
+在0.10  0.11或者之后的HIVE版本 hive.metastore.local 属性不再使用。
+
+在配置文件里面：
+
+ &lt;property&gt;
+
+ &lt;name&gt;hive.metastore.local&lt;/name&gt;
+
+  &lt;value&gt;false&lt;/value&gt;
+
+  &lt;description&gt;controls whether to connect to remove metastore server or open a new metastore server in Hive Client JVM&lt;/description&gt;
+
+&lt;/property&gt;
+
+删除掉，再次登录警告就消失了
 
