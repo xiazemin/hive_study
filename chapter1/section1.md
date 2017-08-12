@@ -24,7 +24,11 @@ $  ./bin/spark
 
 $  ./sbin/start-all.sh
 
- $  cd $HIVE\_HOME
+$  cd $HIVE\_HOME
 
 $  ./bin/hive
+
+\[ERROR\] Terminal initialization failed; falling back to unsupported
+
+java.lang.IncompatibleClassChangeError: Found class jline.Terminal, but interface was expected
 
