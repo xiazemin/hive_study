@@ -32,7 +32,7 @@ Exception in thread "main" java.sql.SQLException: Error while processing stateme
 
 $ hdfs dfs -chmod 777  /user/hive/warehouse
 
-SLF4J: See http://www.slf4j.org/codes.html\#StaticLoggerBinder for further details.
+SLF4J: See [http://www.slf4j.org/codes.html\#StaticLoggerBinder](http://www.slf4j.org/codes.html#StaticLoggerBinder) for further details.
 
 Create table success!
 
@@ -42,15 +42,37 @@ userdb
 
 Running: describe userdb
 
-key	int
+key    int
 
-value	string
+value    string
 
 Running: select count\(1\) from userdb
 
 0
 
+0: jdbc:hive2://localhost:10000/&gt; show tables;
 
++-----------+--+
 
+\| tab\_name  \|
 
++-----------+--+
+
+\| userdb    \|
+
++-----------+--+
+
+1 row selected \(0.155 seconds\)
+
+0: jdbc:hive2://localhost:10000/&gt; select \* from userdb ;
+
++-------------+---------------+--+
+
+\| userdb.key  \| userdb.value  \|
+
++-------------+---------------+--+
+
++-------------+---------------+--+
+
+No rows selected \(0.124 seconds\)
 
