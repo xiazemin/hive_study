@@ -40,23 +40,31 @@ Error: Could not open client transport with JDBC Uri: jdbc:hive2://localhost:100
 
 $ vi conf/hive-site.xml
 
-&lt;property&gt;  
+&lt;property&gt;
 
-        &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;  
+```
+    &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;  
 
-        &lt;value&gt;root&lt;/value&gt;  
+    &lt;value&gt;root&lt;/value&gt;  
 
-        &lt;description&gt;ername to use against metastoredatabase&lt;/description&gt;  
+    &lt;description&gt;ername to use against metastoredatabase&lt;/description&gt;  
+```
 
-&lt;/property&gt;  
+&lt;/property&gt;
 
-&lt;property&gt;  
+&lt;property&gt;
 
-        &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;  
+```
+    &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;  
 
-        &lt;value&gt;123456&lt;/value&gt;  
+    &lt;value&gt;123456&lt;/value&gt;  
 
-        &lt;description&gt;password to use against metastoredatabase&lt;/description&gt;  
+    &lt;description&gt;password to use against metastoredatabase&lt;/description&gt;  
+```
 
-&lt;/property&gt; 
+&lt;/property&gt;
+
+$  netstat -alni \| grep 10000
+
+ beeline -u jdbc:hive2://localhost:10000/
 
