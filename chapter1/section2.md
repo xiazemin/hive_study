@@ -9,7 +9,11 @@
 
 时间戳
 
-
-
 它支持传统的UNIX时间戳可选纳秒的精度。它支持的java.sql.Timestamp格式“YYYY-MM-DD HH:MM:SS.fffffffff”和格式“YYYY-MM-DD HH:MM:ss.ffffffffff”。
+
+日期
+
+
+
+DATE值在年/月/日的格式形式描述 {{YYYY-MM-DD}}.
 
