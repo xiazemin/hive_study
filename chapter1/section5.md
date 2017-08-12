@@ -24,7 +24,15 @@ at jdbc.main\(jdbc.java:33\)
 
 在 hive 1.2.1 需要 jdbc:hive2://localhost:10000/default 而不是 jdbc:hive://localhost:10000/default
 
+$ ./bin/hive --service hiveserver -p 10002
 
+ls: /Users/didi/spark/spark/lib/spark-assembly-\*.jar: No such file or directory
 
+Starting Hive Thrift Server
 
+Exception in thread "main" java.lang.ClassNotFoundException: org.apache.hadoop.hive.service.HiveServer
+
+$ vi etc/hadoop/hadoop-env.sh
+
+export HADOOP\_CLASSPATH=$HADOOP\_CLASSPATH:/Users/didi/hive/hive/lib/hive-\*.jar
 
