@@ -8,29 +8,19 @@ Hive组织表到分区。它是将一个表到基于分区列，如日期，城�
 
 添加分区
 
-
-
 可以通过添加分区表改变所述表。假设我们有一个表叫employee ，拥有如 Id, Name, Salary, Designation, Dept, 和 yoj等字段。
 
-
-
 语法：
-
-
 
 ALTER TABLE table\_name ADD \[IF NOT EXISTS\] PARTITION partition\_spec
 
 \[LOCATION 'location1'\] partition\_spec \[LOCATION 'location2'\] ...;
-
-
 
 partition\_spec:
 
 : \(p\_column = p\_col\_value, p\_column = p\_col\_value, ...\)
 
 以下查询用于将分区添加到employee表。
-
-
 
 hive&gt; ALTER TABLE employee
 
@@ -40,13 +30,31 @@ hive&gt; ALTER TABLE employee
 
 重命名分区
 
-
-
 此命令的语法如下。
-
-
 
 ALTER TABLE table\_name PARTITION partition\_spec RENAME TO PARTITION partition\_spec;
 
 以下查询用来命名一个分区：
+
+hive&gt; ALTER TABLE employee PARTITION \(year=’1203’\)
+
+   &gt; RENAME TO PARTITION \(Yoj=’1203’\);
+
+删除分区
+
+
+
+下面语法用于删除分区：
+
+
+
+ALTER TABLE table\_name DROP \[IF EXISTS\] PARTITION partition\_spec, PARTITION partition\_spec,...;
+
+以下查询是用来删除分区：
+
+
+
+hive&gt; ALTER TABLE employee DROP \[IF EXISTS\]
+
+   &gt; PARTITION \(year=’1203’\);
 
